@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Food | Add Recipe</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .nav {
+        background-color: crimson;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        padding: 10px;
+        letter-spacing: 2px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .navlinks {
+        float: right;
+        padding-right: 30px;
+        cursor: pointer;
+      }
+
+      .navlinks ul li {
+        display: inline-block;
+        padding-right: 30px;
+        cursor: pointer;
+      }
+
+      .navlinks ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 17px;
+        cursor: pointer;
+        text-transform: uppercase;
+      }
+
+      .navborder::after {
+        content: "";
+        width: 0;
+        color: white;
+        height: 2px;
+        display: block;
+        transition: width 0.3s ease;
+      }
+
+      .navborder:hover::after {
+        width: 100%;
+      }
+
+      .container {
+        background-image: linear-gradient(
+            to bottom,
+            rgba(145, 146, 122, 0.62),
+            rgba(218, 13, 29, 0.8)
+          ),
+          url(images/Background%20image%201.jpg);
+        background-size: cover;
+        min-height: 100vh;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .register-form {
+        background-color: ghostwhite;
+        width: 500px;
+        max-width: 500px;
+        width: 80%;
+        height: auto;
+        padding: 30px;
+        display: grid;
+        border-radius: 8px;
+        text-align: left;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="file"],
+      select,
+      textarea {
+        width: 100%;
+        margin-bottom: 20px;
+        border-radius: 7px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+      }
+
+      label {
+        margin-bottom: 5px;
+        display: block;
+        color: #333;
+        font-size: 14px;
+      }
+
+      .register {
+        background-color: crimson;
+        padding: 15px;
+        border: none;
+        margin-top: 30px;
+        border-radius: 5px;
+        transition: 0.3s ease;
+        color: white;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .register:hover {
+        background-color: darkred;
+      }
+
+      h1 {
+        color: crimson;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      hr {
+        border: none;
+        height: 1px;
+        background-color: #ddd;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="logo"><h1>My Food</h1></div>
+
+      <div class="navlinks">
+        <ul>
+          <li><a class="navborder" href="index.html">Home</a></li>
+          <li>
+            <a class="navborder" href="index.html#Recipes">Back To Recipes</a>
+          </li>
+          <li><a class="navborder" href="">Blog</a></li>
+          <li><a class="navborder" href="">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <form
+        class="register-form"
+        action="add_recipe.php"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <h1>Add Recipe</h1>
+        <hr />
+
+        <label for="category">Category:</label>
+        <select id="category" name="category" required>
+          <option value="">Select a category</option>
+          <option value="Appetizers">Starters/Appetizers</option>
+          <option value="Breakfast">Breakfast</option>
+          <option value="Main Course">Main Course</option>
+          <option value="Beverages">Beverages</option>
+          <option value="Desserts">Desserts</option>
+          <option value="Grills">Grills</option>
+          <!-- Add more options as needed -->
+        </select>
+
+        <label for="recipe_name">Recipe Name:</label>
+        <input
+          type="text"
+          id="recipe_name"
+          name="recipe_name"
+          placeholder="Enter Recipe Name"
+          required
+        />
+
+        <label for="recipe_owner">Recipe Owner:</label>
+        <input
+          type="text"
+          id="recipe_owner"
+          name="recipe_owner"
+          placeholder="Enter Recipe Owner"
+          required
+        />
+
+        <label for="recipe_image">Recipe Image:</label>
+        <input type="file" id="recipe_image" name="recipe_image" required />
+
+        <label for="ingredients">Ingredients:</label>
+        <textarea
+          id="ingredients"
+          name="ingredients"
+          rows="4"
+          placeholder="Enter Ingredients"
+          required
+        ></textarea>
+
+        <label for="description">Description:</label>
+        <textarea
+          id="description"
+          name="description"
+          rows="4"
+          placeholder="Enter Description"
+          required
+        ></textarea>
+
+        <label for="instructions">Instructions:</label>
+        <textarea
+          id="instructions"
+          name="instructions"
+          rows="4"
+          placeholder="Enter Instructions"
+          required
+        ></textarea>
+
+        <button class="register" type="submit">Add Recipe</button>
+        <hr />
+      </form>
+    </div>
+  </body>
+</html>

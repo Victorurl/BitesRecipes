@@ -1,0 +1,271 @@
+
+
+
+/*CSS ya dropdown inaisha hapa*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    text-decoration-color: white;
+}
+
+
+h1{
+    color: white;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+/*.........HEADER SECTION.........*/
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin:10px 20px;
+}
+nav ul li a{  /*styles the a tags in the list*/
+    color:white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom:-6px;
+    transition: 0.5s;
+    
+    
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+nav{
+    display:flex ;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /*position: relative;
+    /*top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: white; /* Add background color to make it visible 
+    padding: 10px 20px;
+ */  
+}
+.logo{
+    width:140px;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/Background\ image\ 1.jpg);
+    background-size: cover;
+    background-position:front; 
+}
+.header-text h1 span{
+    color: #ff004f;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text p{
+    font-size: 32px;
+    font-weight: bold;
+    color: red;
+}
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+.container{
+    padding: 10px 10%;
+}
+
+/*......About......*/
+
+
+#about {
+    padding: 80px 0;
+    color: black;
+    background-color: #f5f5f5; 
+    text-align: center; 
+}
+
+#about h2 {
+    font-size: 36px; 
+    margin-bottom: 30px; 
+}
+
+#about p {
+    font-size: 18px; 
+    line-height: 1.5; 
+    margin-bottom: 20px; 
+}
+
+
+/* Recipes Section */
+
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.Recipes {
+    width: 30%;
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+.Recipes a {
+    display: block;
+    margin: 20px auto;
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+.Recipes img {
+    
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.Recipes h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333; 
+}
+
+.Recipes a{
+    font-size: large;
+    
+}
+
+
+/*---------button--------*/
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid black;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: #ff004f;
+}
+
+/*-----Testimonials*/
+
+#testimonials {
+    background-color: #f5f5f5;
+    padding: 50px 0;
+  }
+  
+  #testimonials h2 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .testimonial {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .testimonial p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial p:last-child {
+    font-weight: bold;
+    color: #333;
+  }
+
+#contact {
+    padding: 80px 0;
+    text-align: center;
+  }
+  
+  .contact-left {
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  .contact-left h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  
+  .contact-left p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff004f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  form button:hover {
+    background-color: #e60046;
+  }
+  
+
+  .copyright{
+    width:100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+    color:#fff;
+}
+
+
+  
+  
+

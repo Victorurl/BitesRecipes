@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Food | Register Page</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .nav {
+        background-color: crimson;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        padding: 10px;
+        letter-spacing: 2px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .navlinks {
+        float: right;
+        padding-right: 30px;
+        cursor: pointer;
+      }
+
+      .navlinks ul li {
+        display: inline-block;
+        padding-right: 30px;
+        cursor: pointer;
+      }
+      .navlinks ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 17px;
+        cursor: pointer;
+        text-transform: uppercase;
+      }
+
+      .navborder::after {
+        content: "";
+        width: 0;
+        color: white;
+        height: 2px;
+        display: block;
+        transition: width 0.3s ease;
+      }
+
+      .navborder:hover::after {
+        width: 100%;
+      }
+
+      .container {
+        background-image: linear-gradient(
+            to bottom,
+            rgba(145, 146, 122, 0.62),
+            rgba(218, 13, 29, 0.8)
+          ),
+          url(images/Background\ image\ 1.jpg);
+        background-size: cover;
+        min-height: 100vh;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .register-form {
+        background-color: ghostwhite;
+        width: 500px;
+        max-width: 500px;
+        width: 80%;
+        height: auto;
+        padding: 30px;
+        display: grid;
+        border-radius: 8px;
+        text-align: left;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] input [type="file"] {
+        margin-bottom: 20px;
+        border-radius: 7px;
+        padding: 6px;
+        margin-top: 3px;
+      }
+
+      label {
+        margin-bottom: 20px;
+        padding: 6px;
+        margin-top: 3px;
+      }
+
+      .register {
+        background-color: crimson;
+        padding: 10px;
+        border: none;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border-radius: 5px;
+        transition: 0.5s ease;
+        color: white;
+        text-transform: uppercase;
+        font-size: medium;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="logo"><h1>My Food</h1></div>
+
+      <div class="navlinks">
+        <ul>
+          <li><a class="navborder" href="index.html">Home</a></li>
+          <li>
+            <a class="navborder" href="index.html#Recipes">Back To Recipes</a>
+          </li>
+          <li><a class="navborder" href="">Blog</a></li>
+          <li><a class="navborder" href="">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <form
+        class="register-form"
+        action="./register.php"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <h1 style="color: crimson">Register</h1>
+        <hr />
+        <br />
+        <label for="role">Register as:</label>
+        <select id="role" name="role">
+          <option value="Normal user">Normal User</option>
+          <option value="Administrator">Administrator</option>
+          <option value="Chef">Chef</option>
+        </select>
+        <br /><br />
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter Name"
+          required
+        />
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter Email"
+          required
+        />
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter Password"
+          required
+        />
+
+        <label for="image">Profile Image:</label>
+        <input type="file" id="image" name="image" accept="image/*" required />
+        <button class="register" type="submit">Register</button>
+        <br />
+        <hr />
+      </form>
+    </div>
+  </body>
+</html>
